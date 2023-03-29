@@ -65,7 +65,7 @@ A vector consisting of two floating point components
   > Adds together two vectors
   
   > 
-  ```cpp
+  ```lua
   local a = Vector2.new(1, 5)
   local b = Vector2.new(2, -1)
   
@@ -79,7 +79,7 @@ A vector consisting of two floating point components
   > Subtracts two vectors
   
   > 
-  ```cpp
+  ```lua
   local a = Vector2.new(6, -1)
   local b = Vector2.new(-3, -2)
   
@@ -93,7 +93,7 @@ A vector consisting of two floating point components
   > Multiplies two vectors
   
   > 
-  ```cpp
+  ```lua
   local a = Vector2.new(1, 2)
   local b = Vector2.new(4, 5)
   
@@ -107,7 +107,7 @@ A vector consisting of two floating point components
   > Divides two vectors
 
   > 
-  ```cpp
+  ```lua
   local a = Vector2.new(6, 4)
   local b = Vector2.new(3, 2)
   

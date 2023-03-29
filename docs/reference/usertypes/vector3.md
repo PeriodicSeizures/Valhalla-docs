@@ -13,7 +13,7 @@ A vector consisting of three floating point components
   > Constructs a Vector3 from x, y, and z parameters
 
 ### `Vector3.ZERO`
-  > Returns `Vector23`
+  > Returns `Vector3`
   
   > A zero vector (0, 0, 0)
 
@@ -70,7 +70,7 @@ A vector consisting of three floating point components
   > Adds together two vectors
   
   > 
-  ```cpp
+  ```lua
   local a = Vector3.new(1, 0.5, 1)
   local b = Vector3.new(2, -1, -2)
   
@@ -84,7 +84,7 @@ A vector consisting of three floating point components
   > Subtracts two vectors
 
   > 
-  ```cpp
+  ```lua
   local a = Vector3.new(6, -2.3, -4)
   local b = Vector3.new(-3, -2, 2)
   
@@ -98,7 +98,7 @@ A vector consisting of three floating point components
   > Multiplies two vectors
   
   > 
-  ```cpp
+  ```lua
   local a = Vector3.new(1, 2, 3)
   local b = Vector3.new(4, 5, 6)
   
@@ -112,7 +112,7 @@ A vector consisting of three floating point components
   > Divides two vectors
 
   > 
-  ```cpp
+  ```lua
   local a = Vector3.new(6, 4, 10)
   local b = Vector3.new(3, 2, 2)
   
