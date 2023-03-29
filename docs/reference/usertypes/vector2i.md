@@ -13,7 +13,7 @@ A vector consisting of two integer components
   > Constructs a Vector2i from x, y, and z parameters
 
 ### `Vector2i.ZERO`
-  > Returns `Vector2i`
+  > Returns `Vector2i` | **readonly**
   
   > A zero vector (0, 0)
 
@@ -28,17 +28,17 @@ A vector consisting of two integer components
   > The y component of the vector
 
 ### `vector2i.magnitude`
-  > Result: `number` | readonly
+  > Result: `number` | **readonly**
 
   > The length of the vector
   
 ### `vector2i.magnitude`
-  > Result: `number` | readonly
+  > Result: `number` | **readonly**
 
   > The squared length of the vector
 
 ### `vector2i.normalized`
-  > Result: `Vector2i` | readonly
+  > Result: `Vector2i` | **readonly**
 
   > A vector with a length of one and same direction as this
 

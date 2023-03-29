@@ -13,7 +13,7 @@ A vector consisting of two floating point components
   > Constructs a Vector2 from x, y, and z parameters
 
 ### `Vector2.ZERO`
-  > Returns `Vector2`
+  > Returns `Vector2` | **readonly**
   
   > A zero vector (0, 0)
 
@@ -28,17 +28,17 @@ A vector consisting of two floating point components
   > The y component of the vector
 
 ### `Vector2.magnitude`
-  > Result: `number` | readonly
+  > Result: `number` | **readonly**
 
   > The length of the vector
   
 ### `Vector2.magnitude`
-  > Result: `number` | readonly
+  > Result: `number` | **readonly**
 
   > The squared length of the vector
 
 ### `Vector2.normalized`
-  > Result: `Vector2` | readonly
+  > Result: `Vector2` | **readonly**
 
   > A vector with a length of one and same direction as this
 

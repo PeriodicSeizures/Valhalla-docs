@@ -33,17 +33,17 @@ A vector consisting of three floating point components
   > The z component of the vector
   
 ### `vector3.magnitude`
-  > Returns `number` | readonly
+  > Returns `number` | **readonly**
 
   > The length of the vector
   
 ### `vector3.sqMagnitude`
-  > Returns `number` | readonly
+  > Returns `number` | **readonly**
 
   > The squared length of the vector
   
 ### `vector3.normalized`
-  > Returns `Vector3` | readonly
+  > Returns `Vector3` | **readonly**
 
   > A vector with a length of one and same direction as this
 

@@ -1,8 +1,8 @@
 # DataWriter
 
-A fast utility class for serializing objects to a buffer
+A fast utility class for serializing objects
 
-### `DataWriter.new(BYTES_t&)`
+### `DataWriter.new(bytes)`
   > Returns `DataWriter`
 
   > Constructs a DataWriter using a specified buffer
@@ -11,7 +11,7 @@ A fast utility class for serializing objects to a buffer
   underlying vector. Doing so will cause segfaults.
   
 ### `dataWriter.provider`
-  > Returns `number`
+  > Returns `bytes`
   
   > The underlying buffer of the writer
   

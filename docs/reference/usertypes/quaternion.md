@@ -14,7 +14,7 @@ A series of rotations with 4 components
   radians. 
 
 ### `Quaternion.IDENTITY`
-  > Returns `Quaternion`
+  > Returns `Quaternion` | **readonly**
   
   > An identity quaternion (0, 0, 0, 1)
   
