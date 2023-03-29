@@ -1,67 +1,121 @@
 # Vector3
 
-### `Vector3.new()`
-  - Result: `Vector3`
+A vector consisting of three floating point components
 
-Constructs a Vector3 equal to Vector3.ZERO
+### `Vector3.new()`
+  > Returns `Vector3`
+
+  > Constructs a Vector3 equivalent to Vector3.ZERO
 
 ### `Vector3.new(x, y, z)`
-  - Result: `Vector3`
+  > Returns `Vector3`
 
-Constructs a Vector3 from x, y, and z parameters
+  > Constructs a Vector3 from x, y, and z parameters
 
-### `vector3.__add(other)`
-  - Result: `Vector3`
-
-Adds together this and another vector, returning a new vector
-
-### `vector3.__sub(other)`
-  - Result: `Vector3`
-
-Subtracts a vector from this, returning a new vector
+### `Vector3.ZERO`
+  > Returns `Vector23`
+  
+  > A zero vector (0, 0, 0)
 
 ### `vector3.x`
-  - Result: `number`
-  - Mode: Set or get.
+  > Returns `number`
 
-The x component of the vector
+  > The x component of the vector
 
 ### `vector3.y`
-  - Result: `number`
-  - Mode: Set or get.
+  > Returns `number`
 
-The y component of the vector
+  > The y component of the vector
 
 ### `vector3.z`
-  - Result: `number`
-  - Mode: Set or get.
+  > Returns `number`
 
-The z component of the vector
+  > The z component of the vector
+  
+### `vector3.magnitude`
+  > Returns `number` | readonly
+
+  > The length of the vector
+  
+### `vector3.sqMagnitude`
+  > Returns `number` | readonly
+
+  > The squared length of the vector
+  
+### `vector3.normalized`
+  > Returns `Vector3` | readonly
+
+  > A vector with a length of one and same direction as this
 
 ### `vector3:Distance(other)`
-  - Result: `number`
+  > Returns `number`
 
-The distance between this and another vector
-
-### `vector3.magnitude`
-  - Result: `number`
-  - Mode: Get only.
-
-The magnitude of the vector
+  > The distance another vector and this
 
 ### `vector3:Normalize()`
-  - Result: `Vector3&`
-  - *Note: using an temporary reference might break things*
+  > Returns `Vector3&`
+  
+  > *Note: using an temporary reference might break things*
 
-Normalizes the vector and return this
+  > Normalizes the vector and return this
 
-### `vector3.normalized`
-  - Result: `Vector3`
-  - Mode: Get only.
+### `vector3:SqDistance(other)`
+  > Returns `number`
 
-Returns a new normalized this
+  > The squared distance another vector and this
 
-### `vector3.SqDistance(other)`
-  - Result: `number`
+### `vector3:__add()`
+  > Returns `Vector3`
 
-Returns the squared distance between this and another vector
+  > Adds together two vectors
+  
+  > 
+  ```cpp
+  local a = Vector3.new(1, 0.5, 1)
+  local b = Vector3.new(2, -1, -2)
+  
+  -- (3, -0.5, -1)
+  local result = a + b
+  ```
+
+### `vector3:__sub()`
+  > Returns `Vector3`
+
+  > Subtracts two vectors
+
+  > 
+  ```cpp
+  local a = Vector3.new(6, -2.3, -4)
+  local b = Vector3.new(-3, -2, 2)
+  
+  -- (9, -0.3, -6)
+  local result = a - b
+  ```
+
+### `vector3:__mul()`
+  > Returns `Vector3`
+
+  > Multiplies two vectors
+  
+  > 
+  ```cpp
+  local a = Vector3.new(1, 2, 3)
+  local b = Vector3.new(4, 5, 6)
+  
+  -- (4, 10, 18)
+  local result = a * b
+  ```
+
+### `vector3:__div()`
+  > Returns `Vector3`
+
+  > Divides two vectors
+
+  > 
+  ```cpp
+  local a = Vector3.new(6, 4, 10)
+  local b = Vector3.new(3, 2, 2)
+  
+  -- (2, 2, 5)
+  local result = a / b
+  ```

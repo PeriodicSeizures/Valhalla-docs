@@ -1,60 +1,116 @@
 # Vector2i
 
-*I like this quote format more than Vector3...*
+A vector consisting of two integer components
 
 ### `Vector2i.new()`
   > Returns `Vector2i`
 
-  > Constructs a Vector2i equal to Vector2i.ZERO
+  > Constructs a Vector2i equivalent to Vector2i.ZERO
 
 ### `Vector2i.new(x, y, z)`
   > Returns `Vector2i`
 
   > Constructs a Vector2i from x, y, and z parameters
 
-### `Vector2i.__add(other)`
+### `Vector2i.ZERO`
   > Returns `Vector2i`
+  
+  > A zero vector (0, 0)
 
-  > Adds together this and another vector, returning a new vector
-
-### `Vector2i.__sub(other)`
-  > Returns `Vector2i`
-
-  > Subtracts a vector from this, returning a new vector
-
-### `Vector2i.x`
+### `vector2i.x`
   > Returns `number`
 
   > The x component of the vector
 
-### `Vector2i.y`
+### `vector2i.y`
   > Returns `number`
 
   > The y component of the vector
 
-### `Vector2i:Distance(other)`
-  > Returns `number`
-
-  > The distance between this and another vector
-
-### `Vector2i.magnitude`
+### `vector2i.magnitude`
   > Result: `number` | readonly
 
-The magnitude of the vector
+  > The length of the vector
+  
+### `vector2i.magnitude`
+  > Result: `number` | readonly
 
-### `Vector2i:Normalize()`
+  > The squared length of the vector
+
+### `vector2i.normalized`
+  > Result: `Vector2i` | readonly
+
+  > A vector with a length of one and same direction as this
+
+### `vector2i:Distance(other)`
+  > Returns `number`
+
+  > The distance another vector and this
+
+### `vector2i:Normalize()`
   > Result: `Vector2i&`
   
   > *Note: using an temporary reference might break things*
 
   > Normalizes the vector and return this
 
-### `Vector2i.normalized`
-  > Result: `Vector2i` | readonly
-
-  > Returns a new normalized this
-
-### `Vector2i.SqDistance(other)`
+### `vector2i:SqDistance(other)`
   > Result: `number`
 
-  > Returns the squared distance between this and another vector
+  > The squared distance another vector and this
+
+### `vector2i:__add()`
+  > Returns `Vector2i`
+
+  > Adds together two vectors
+  
+  > 
+  ```cpp
+  local a = Vector2i.new(1, 5)
+  local b = Vector2i.new(2, -1)
+  
+  -- (3, 4)
+  local result = a + b
+  ```
+
+### `vector2i:__sub()`
+  > Returns `Vector2i`
+
+  > Subtracts two vectors
+  
+  > 
+  ```cpp
+  local a = Vector2i.new(6, -1)
+  local b = Vector2i.new(-3, -2)
+  
+  -- (9, 1)
+  local result = a - b
+  ```
+  
+### `vector2i:__mul()`
+  > Returns `Vector2i`
+
+  > Multiplies two vectors
+  
+  > 
+  ```cpp
+  local a = Vector2i.new(1, 2)
+  local b = Vector2i.new(4, 5)
+  
+  -- (4, 10)
+  local result = a * b
+  ```
+
+### `vector2i:__div()`
+  > Returns `Vector2i`
+
+  > Divides two vectors
+
+  > 
+  ```cpp
+  local a = Vector2i.new(6, 4)
+  local b = Vector2i.new(3, 2)
+  
+  -- (2, 2)
+  local result = a / b
+  ```
