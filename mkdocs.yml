@@ -1,0 +1,110 @@
+site_name: Valhalla
+#site_url: https://PeriodicSeizures.github.io/Valhalla/
+repo_name: PeriodicSeizures/Valhalla
+repo_url: https://github.com/PeriodicSeizures/Valhalla
+
+#nav:
+#  - Home: index.md
+#  - Getting started: 
+#    - Building: building.md
+#    - Installing: installing.md
+#    - Configuration: configuration.md
+#  - API Reference:
+#    - reference/index.md # top-level
+#    - Usertypes: 
+#      #- reference/usertypes/index.md
+#      - Vector3: reference/usertypes/vector3.md
+#      - Vector2i: reference/usertypes/vector2i.md
+#      - Quaternion: reference/usertypes/quaternion.md
+#      - ZDOID: reference/usertypes/zdoid.md
+#      - DataWriter: reference/usertypes/datawriter.md
+#      - DataReader: reference/usertypes/datareader.md
+#      - Socket: reference/usertypes/socket.md
+#      - MethodSig: reference/usertypes/methodsig.md
+#      - Prefab: reference/usertypes/prefab.md
+#      - Peer: reference/usertypes/peer.md
+#      - ZDO: reference/usertypes/zdo.md
+#      - Int64: reference/usertypes/int64.md
+#      #- UInt64: reference/usertypes/uint64.md
+#      - Dungeon: reference/usertypes/dungeon.md
+#      - FeatureInstance: reference/usertypes/featureinstance.md
+#      - Mod: reference/usertypes/mod.md
+#      - ZStdCompressor: reference/usertypes/zstdcompressor.md
+#      - ZStdDecompressor: reference/usertypes/zstddecompressor.md
+#      - GzCompressor: reference/usertypes/gzcompressor.md
+#      - GzDecompressor: reference/usertypes/gzdecompressor.md
+#    - Enums: reference/enums.md
+#    - Managers: 
+#      - reference/managers.md
+#      - Valhalla: reference/managers/valhalla.md
+#      - PrefabManager: reference/managers/prefabmanager.md
+#      - ZDOManager: reference/managers/zdomanager.md
+#      - NetManager: reference/managers/netmanager.md
+#      - ModManager: reference/managers/modmanager.md
+#      - DungeonManager: reference/managers/dungeonmanager.md
+#      - ZoneManager: reference/managers/zonemanager.md
+#      - RouteManager: reference/managers/routemanager.md
+#    - Utilities: 
+#      - reference/utilities/index.md
+#      - VUtils: reference/utilities/vutils.md
+#  - About: about.md
+#  - Intricate:
+#    - Networking: intricate/networking.md
+  
+theme:
+  # requires material for this stuff below
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=dark#accent-color
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/PeriodicSeizures
+#    - icon: fontawesome/brands/twitter
+#      link: https://twitter.com/mytwitter
+#    - icon: fontawesome/brands/linkedin
+#      link: https://www.linkedin.com/in/mylinkedin
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/PeriodicSeizures"  target="_blank" rel="noopener">Ricardo Solana</a>
