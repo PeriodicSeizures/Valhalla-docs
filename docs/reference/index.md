@@ -15,10 +15,10 @@ which will sometimes be referred to as properties.
 
 ### Uppercase .
 
-References which start in uppercase (i.e. `Vector2i.new()`, `ZDOID.NONE`)
+API References which start in uppercase (i.e. `Vector2i.new()`, `ZDOID.NONE`)
 generally belong to a class.
 
 ### Lowercase . :
   
-References which start in lowercase (i.e. `vector3.y`, `vector3:Distance(other)`)
+API References which start in lowercase (i.e. `vector3.y`, `vector3:Distance(other)`)
 generally belong to a instantiated class object.

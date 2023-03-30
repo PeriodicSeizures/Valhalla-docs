@@ -6,14 +6,14 @@
   > Valheim version: `0.214.300`
   
 ### `Valhalla.delta`
-  > Returns `number`
+  > Returns `number` | **readonly**
   
   > The delta time for this frame
   
   > Equivalent to Unity `Time.deltaTime`
   
 ### `Valhalla.id`
-  > Returns `number`
+  > Returns `Int64` | **readonly**
 
   > The randomly generated server id.
 
@@ -21,12 +21,12 @@
   ownership throughout gameplay.
   
 ### `Valhalla.nanos`
-  > Returns `number`
+  > Returns `Int64` | **readonly**
 
   > The time in nanoseconds
   
 ### `Valhalla.time`
-  > Returns `number`
+  > Returns `number` | **readonly**
   
   > The time in seconds
   
@@ -48,7 +48,7 @@
   for more information regarding usages.
 
 ### `Valhalla.worldTicks`
-  > Returns `number`
+  > Returns `number` | **readonly**
 
   > Similar to worldTime but in C# `DateTime.Ticks`
 
@@ -60,46 +60,56 @@
 ### `Valhalla.timeOfDay`
   > Returns `number`
   
-  > The current relative time of day. In Valheim, an entire cycle is 1800s, with day starting at a skewed 270s.
-  This returns the time wrapped around 1800 (worldTime % 1800).
+  > The current relative time of day. 
+  
+  > An entire cycle is 1800, where a new day starts at 270.
+    
+  > | Time of day   | Start time  | End time     |
+  > | :----------   | :---------- | :----------  |
+  > | Morning       | 240         | 270          |
+  > | Day           | 270         | 900          |
+  > | Afternoon     | 900         | 1530         |
+  > | Night         | 1530        | 240          |
+  
+  
 
 ### `Valhalla.isMorning`
-  > Returns `boolean`
+  > Returns `boolean` | **readonly**
   
   > Whether the current time is morning
 
 ### `Valhalla.isDay`
-  > Returns `boolean`
+  > Returns `boolean` | **readonly**
 
   > Whether the current time is day
 
 ### `Valhalla.isAfternoon`
-  > Returns `boolean`
+  > Returns `boolean` | **readonly**
   
   > Whether the current time is the afternoon
 
 ### `Valhalla.isNight`
-  > Returns `boolean`
+  > Returns `boolean` | **readonly**
   
   > Whether the current time is night
 
 ### `Valhalla.tomorrowMorning`
-  > Returns `number`
+  > Returns `number` | **readonly**
   
   > The worldTime for the morning time pertaining to the current `day` + 1
 
 ### `Valhalla.tomorrow`
-> Returns `number`
+> Returns `number` | **readonly**
 
   > The worldTime for the day time pertaining to the current `day` + 1
 
 ### `Valhalla.tomorrowAfternoon`
-> Returns `number`
+> Returns `number` | **readonly**
 
   > The worldTime for the afternoon time pertaining to the current `day` + 1
 
 ### `Valhalla.tomorrowNight`
-> Returns `number`
+> Returns `number` | **readonly**
 
   > The worldTime for the night time pertaining to the current `day` + 1
 
