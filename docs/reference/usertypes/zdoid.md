@@ -2,7 +2,7 @@
 
 A ZDO identity structure
 
-### `ZDOID.new(uuid: int64, id)`
+### `ZDOID.new(uuid, id)`
   > Returns `ZDOID`
 
   > Constructs a ZDOID from a `int64` uuid and a numeric id
@@ -11,7 +11,7 @@ A ZDO identity structure
   > A zero ZDOID (0, 0)
   
 ### `zdoid.uuid`
-  > Returns `int64`
+  > Returns `Int64`
   
   > The uuid of the zdoid as a `int64`
   

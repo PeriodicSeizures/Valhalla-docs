@@ -22,3 +22,14 @@ generally belong to a class.
   
 API References which start in lowercase (i.e. `vector3.y`, `vector3:Distance(other)`)
 generally belong to a instantiated class object.
+
+### Parameter naming
+
+| Name              | Assumed type
+| :----------       | :---------- 
+| target/uuid/owner | Int64
+| somethingHash     | number (value within int32_t)
+| other             | same class type
+| bytes             | Bytes
+| container<~>    | sol container of specified types
+| strings           | container<string\>

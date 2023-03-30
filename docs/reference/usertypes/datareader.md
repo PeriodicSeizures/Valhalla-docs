@@ -8,20 +8,22 @@ Objects which start with a 32-bit signed size will throw if the size is negative
 ### `DataReader.new(bytes)`
   > Returns `DataReader`
 
-  > Constructs a DataReader using a specified buffer
+  > Constructs a DataReader using a specified byte buffer
 
   > This object must not exist beyond the scope of its
   underlying vector. Doing so will cause segfaults.
   
 ### `dataReader.provider`
-  > Returns `bytes`
+  > Returns `Bytes`
   
-  > The underlying buffer of the reader
+  > The underlying byte buffer of the reader
   
 ### `dataReader.pos`
   > Returns `number`
   
   > The current position of the reader
+  
+  > Will throw if set position is invalid (negative or outside bounds)
   
 ### `dataReader:ReadBool()`
   > Returns `boolean`
@@ -34,12 +36,12 @@ Objects which start with a 32-bit signed size will throw if the size is negative
   > Reads a string from the stream and advances the position by `4 + <size>`
 
 ### `dataReader:ReadStrings()`
-  > Returns `list<string>`
+  > Returns `strings`
   
-  > Reads a list<string> from the stream and advances the position by `4 + <count>`
+  > Reads several strings from the stream and advances the position by `4 + <count>`
   
 ### `dataReader:ReadBytes()`
-  > Returns `bytes`
+  > Returns `Bytes`
   
   > Reads a byte buffer from the stream and advances the position by `4 + <size>`
   

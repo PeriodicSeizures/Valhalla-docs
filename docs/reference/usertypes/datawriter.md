@@ -2,6 +2,9 @@
 
 A fast utility class for serializing objects
 
+None of the write methods below check for overflows or sign,
+so use them correctly.
+
 ### `DataWriter.new(bytes)`
   > Returns `DataWriter`
 
@@ -11,7 +14,7 @@ A fast utility class for serializing objects
   underlying vector. Doing so will cause segfaults.
   
 ### `dataWriter.provider`
-  > Returns `bytes`
+  > Returns `Bytes`
   
   > The underlying buffer of the writer
   
@@ -20,14 +23,16 @@ A fast utility class for serializing objects
   
   > The current position of the writer
   
+  > Will throw if set position is invalid (negative or outside bounds)
+  
 ### `dataWriter:Clear()`
   > Clears the underlying buffer and sets `pos` to 0
   
 ### `dataWriter:Write(object)`
   > An overload for writing an object to the underlying buffer
   
-  > Overloads: `boolean`, `string`, `list<string>`, `bytes`, `ZDOID`, `Vector3`, 
-  ` Vector2i`, `Quaternion`, `UserProfile`
+  > Accepts: `boolean`, `string`, `strings`, `Bytes`, `ZDOID`, `Vector3`, 
+  ` Vector2i`, `Quaternion`, `UserProfile`, `Int64`, `UInt64`
   
 ### `dataWriter:WriteInt8(value)`
   > Writes a `number` as a signed 8 bit integer
@@ -37,8 +42,8 @@ A fast utility class for serializing objects
   
 ### `dataWriter:WriteInt32(value)`
   > Writes a `number` as a signed 32 bit integer
-  
-### `dataWriter:WriteInt64(value: Int64)`
+
+### `dataWriter:WriteInt64(value)`
   > Writes a `Int64` as a signed 64 bit integer
   
 ### `dataWriter:WriteUInt8(value)`
@@ -50,7 +55,7 @@ A fast utility class for serializing objects
 ### `dataWriter:WriteUInt32(value)`
   > Writes a `number` as an unsigned 32 bit integer
   
-### `dataWriter:WriteUInt64(value: UInt64)`
+### `dataWriter:WriteUInt64(value)`
   > Writes a `UInt64` as an unsigned 64 bit integer
   
 ### `dataWriter:WriteFloat(value)`
