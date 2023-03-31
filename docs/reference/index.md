@@ -31,5 +31,5 @@ generally belong to a instantiated class object.
 | somethingHash     | number (value within int32_t)
 | other             | same class type
 | bytes             | Bytes
-| container<~>    | sol container of specified types
+| container<~>      | sol container of specified types
 | strings           | container<string\>

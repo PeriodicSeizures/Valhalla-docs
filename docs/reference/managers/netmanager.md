@@ -1,6 +1,6 @@
 # NetManager
 
-### `NetManager:GetPeer(owner: Int64)`
+### `NetManager:GetPeer(uuid)`
   > Returns `Peer` or `nil`
   
   > Finds a peer by uuid
