@@ -1,65 +1,58 @@
-# Vector2
+# Vector2f
 
 A vector consisting of two floating point components
 
-### `Vector2.new()`
+### `Vector2f.new()`
   > Returns `Vector2`
 
   > Constructs a Vector2 equivalent to Vector2.ZERO
 
-### `Vector2.new(x, y, z)`
+### `Vector2f.new(x, y, z)`
   > Returns `Vector2`
 
   > Constructs a Vector2 from x, y, and z parameters
 
-### `Vector2.ZERO`
+### `Vector2f.ZERO`
   > Returns `Vector2` | **readonly**
   
   > A zero vector (0, 0)
 
-### `Vector2.x`
+### `vector2f.x`
   > Returns `number`
 
   > The x component of the vector
 
-### `Vector2.y`
+### `vector2f.y`
   > Returns `number`
 
   > The y component of the vector
 
-### `Vector2.magnitude`
+### `vector2f.magnitude`
   > Result: `number` | **readonly**
 
   > The length of the vector
   
-### `Vector2.magnitude`
+### `vector2f.sqMagnitude`
   > Result: `number` | **readonly**
 
   > The squared length of the vector
 
-### `Vector2.normalized`
-  > Result: `Vector2` | **readonly**
+### `vector2f.normal`
+  > Result: `Vector2f` | **readonly**
+  
+  > Returns the unit normal vector of this
 
-  > A vector with a length of one and same direction as this
-
-### `Vector2:Distance(other)`
+### `vector2f:Distance(other)`
   > Returns `number`
 
   > The distance another vector and this
 
-### `Vector2:Normalize()`
-  > Result: `Vector2&`
-  
-  > *Note: using an temporary reference might break things*
-
-  > Normalizes the vector and return this
-
-### `Vector2:SqDistance(other)`
+### `vector2f:SqDistance(other)`
   > Result: `number`
 
   > The squared distance another vector and this
 
-### `Vector2:__add()`
+### `vector2f:__add()`
   > Returns `Vector2`
 
   > Adds together two vectors
@@ -73,7 +66,7 @@ A vector consisting of two floating point components
   local result = a + b
   ```
 
-### `Vector2:__sub()`
+### `vector2f:__sub()`
   > Returns `Vector2`
 
   > Subtracts two vectors
@@ -87,7 +80,7 @@ A vector consisting of two floating point components
   local result = a - b
   ```
   
-### `Vector2:__mul()`
+### `vector2f:__mul()`
   > Returns `Vector2`
 
   > Multiplies two vectors
@@ -101,7 +94,7 @@ A vector consisting of two floating point components
   local result = a * b
   ```
 
-### `Vector2:__div()`
+### `vector2f:__div()`
   > Returns `Vector2`
 
   > Divides two vectors

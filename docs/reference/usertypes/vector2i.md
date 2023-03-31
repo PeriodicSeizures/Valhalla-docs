@@ -37,22 +37,15 @@ A vector consisting of two integer components
 
   > The squared length of the vector
 
-### `vector2i.normalized`
+### `vector2i.normal`
   > Result: `Vector2i` | **readonly**
-
-  > A vector with a length of one and same direction as this
+  
+  > Returns the unit normal vector of this
 
 ### `vector2i:Distance(other)`
   > Returns `number`
 
   > The distance another vector and this
-
-### `vector2i:Normalize()`
-  > Result: `Vector2i&`
-  
-  > *Note: using an temporary reference might break things*
-
-  > Normalizes the vector and return this
 
 ### `vector2i:SqDistance(other)`
   > Result: `number`

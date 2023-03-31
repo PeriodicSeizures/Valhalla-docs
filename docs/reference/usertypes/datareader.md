@@ -1,6 +1,6 @@
 # DataReader
 
-A fast utility class for deserializing objects
+A deserializing utility. Is essentially a wrapper around a `Bytes` object
 
 Note: Any of the Read...() methods below will throw if the length is exceeded. 
 Objects which start with a 32-bit signed size will throw if the size is negative.
@@ -10,11 +10,15 @@ Objects which start with a 32-bit signed size will throw if the size is negative
 
   > Constructs a DataReader using a specified byte buffer
 
+  > In the C++ implementation, this constructor accepts a Bytes reference.
+  I am not fully sure how this will work within Lua if passed an rvalue 
+  (do those exist?).
+
   > This object must not exist beyond the scope of its
   underlying vector. Doing so will cause segfaults.
   
 ### `dataReader.provider`
-  > Returns `Bytes`
+  > Returns `Bytes&`
   
   > The underlying byte buffer of the reader
   
