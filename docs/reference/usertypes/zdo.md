@@ -36,14 +36,11 @@ and states throughout Valheim gameplay.
   
   > Checks whether the specified uuid is the owner of the zdo
   
-### `zdo.local`
+### `zdo:IsLocal`
   > Returns `boolean`
   
   > Whether the zdo is owned by the server
-  
-  > If assigned to true, will set the owner to the server, else will disown
-  the zdo **ONLY** if the zdo is owned by the server
-  
+    
 ### `zdo.claimed`
   > Returns `boolean` | **readonly**
   
