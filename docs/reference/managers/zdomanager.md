@@ -2,83 +2,76 @@
 
 Manager class for keeping client objects updated
 
-### `ZDOManager:GetZDO(zdoid)`
+!!! danger test
+    Accessing ZDOs after they have been manually collected with `DestroyZDO` or automatically collected by a client **will** crash your program.
+    
+    Make sure to store ZDOs by their id instead of the ZDO itself.
+
+I need better formatting ideas for this, ie how to organize overloads and stuff,
+
+## ZDOManager:GetZDO(zdoid)
   > Returns `ZDO` or `nil`
   
-### `ZDOManager:SomeZDOs(pos, radius, max, func)`
+## ZDOManager:SomeZDOs...
   > Returns `container<ZDO>`
   
-  > Find up to `max` ZDOs within a radius of position that pass a binary predicate
+  > Find up to `max` ZDOs
   
-  > `ZDOManager:SomeZDOs(vec, 20, 10, function(zdo) return true end)`
-  
-  >
-  ```lua
+  > 
+  ```lua title="Positional overloads"
+  ZDOManager:SomeZDOs(pos, radius, max, pred)
   ZDOManager:SomeZDOs(pos, radius, max)
   ZDOManager:SomeZDOs(pos, radius, max, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:SomeZDOs(pos, radius, max, prefabName)
   ```
   
-### `ZDOManager:SomeZDOs(zone, max, func)`
-  > Returns `container<ZDO>`
+  >
+  ```lua title="Get up to 5 ZDOs near any joining player within 16m"  hl_lines="2 2"
+  Valhalla:Subscribe('Join', function(peer)
+    local zdos = ZDOManager:SomeZDOs(peer.pos, 16, 5)
+    
+    -- do stuff with zdos...
+  end)
   
-  > Find up to `max` ZDOs within a zone that pass a binary predicate
+  ```
   
   >
-  ```lua
+  ```
   ZDOManager:SomeZDOs(zone, max)
   ZDOManager:SomeZDOs(zone, max, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:SomeZDOs(zone, max, prefabName)
   ```
   
-### `ZDOManager:SomeZDOs(zone, max, pos, radius)`
-  > Returns `container<ZDO>`
-  
-  > Find up to `max` ZDOs within a zone, then within a radius of position.
-
   >
-  ```lua
+  ```
   ZDOManager:SomeZDOs(zone, max, pos, radius, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:SomeZDOs(zone, max, pos, radius, prefabName)
   ```
   
-### `ZDOManager:GetZDOs(prefabHash)`
+### `ZDOManager:GetZDOs`
   > Returns `container<ZDO>`
   
-  > Get all the ZDOs in world of prefabHash
   
-### `ZDOManager:GetZDOs(prefabName)`
-  > Returns `container<ZDO>`
-  
-  > Get all the ZDOs in world of prefabName
-  
-### `ZDOManager:GetZDOs(pos, radius, func)`
-  > Returns `container<ZDO>`
-  
-  > Find all ZDOs within a radius of position passing a binary predicate
+  > Get all the ZDOs in world with optional specifiers:
   
   >  
   ```lua  
+  ZDOManager:GetZDOs(prefabHash)
+  
+  ZDOManager:GetZDOs(prefabName)
+  
+  ZDOManager:GetZDOs(pos, radius, pred)
+  
   ZDOManager:GetZDOs(pos, radius)
   ZDOManager:GetZDOs(pos, radius, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:GetZDOs(pos, radius, prefabName)
-  ```
   
-### `ZDOManager:GetZDOs(zone, func)`
-  > Returns `container<ZDO>`
-
-  > 
-  ```lua
+  ZDOManager:GetZDOs(zone, pred)
+  
   ZDOManager:GetZDOs(zone)
   ZDOManager:GetZDOs(zone, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:GetZDOs(zone, prefabName)
-  ```
   
-### `ZDOManager:GetZDOs(zone, pos, radius)`
-  > Returns `container<ZDO>`
-  
-  >
-  ```lua
   ZDOManager:GetZDOs(zone, pos, radius, prefabHash, flagsPresent, flagsAbsent)
   ZDOManager:GetZDOs(zone, pos, radius, prefabName)
   ```

@@ -1,5 +1,8 @@
 # RouteManager
 
+### `RouteManager:Register(sig, function)`
+  > Registers a RoutedRpc function
+
 ### `RouteManager:InvokeView(target, zdoid, methodRepr, ...)`
   > Invokes a RoutedRpc aimed towards a peer(s) specified ZNetView object
   

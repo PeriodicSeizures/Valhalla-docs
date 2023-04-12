@@ -40,9 +40,12 @@ and states throughout Valheim gameplay.
   > Returns `boolean`
   
   > Whether the zdo is owned by the server
+  
+### `zdo:SetLocal`
+  > Set the server as the owner of the ZDO
     
-### `zdo.claimed`
-  > Returns `boolean` | **readonly**
+### `zdo:HasOwner()`
+  > Returns `boolean`
   
   > Returns whether this zdo has an owner
   
